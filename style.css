@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ffcc00;
+    padding: 10px 0;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    flex-wrap: wrap;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto; /* Permite desplazamiento horizontal en caso de que el menú sea más grande que la pantalla */
+    margin: 0;
+    padding: 0;
+}
+
+.menu ul li {
+    margin-right: 10px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.right-menu {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.right-menu a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.hero {
+    position: relative;
+    text-align: center;
+    height: auto;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+/* Media Query para cambiar la imagen en pantallas pequeñas */
+@media (max-width: 768px) {
+    .hero img {
+        content: url('img celular.jpg'); /* Cambia la imagen en dispositivos móviles */
+    }
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-shadow: 2px 2px 5px #000;
+}
+
+.overlay h1 {
+    font-size: 2rem; /* Ajuste de tamaño */
+    margin: 0;
+}
+
+.brands {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.brands img {
+    margin: 10px;
+    height: 40px; /* Tamaño ajustado */
+}
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        justify-content: space-evenly; /* Espaciado uniforme entre los elementos */
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .menu ul li {
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .right-menu {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .right-menu a {
+        margin: 5px;
+    }
+
+    .overlay h1 {
+        font-size: 1.6rem;
+    }
+
+    .brands img {
+        height: 30px; /* Ajuste adicional para pantallas pequeñas */
+        max-width: 100px;
+    }
+}
